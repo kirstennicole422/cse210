@@ -25,6 +25,7 @@ class Program
             letter = "D";
             passClass = false;
         }
+        
         else
         {
             letter = "F";

@@ -26,8 +26,6 @@ class Program
             numbers.Add(nextNumber);
         } while (userInput != "0");
 
-
-
         foreach (int number in numbers)
         {
             if (number > max)
