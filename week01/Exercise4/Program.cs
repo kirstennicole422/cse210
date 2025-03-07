@@ -30,7 +30,6 @@ class Program
 
         foreach (int number in numbers)
         {
-            Console.WriteLine(number);
             if (number > max)
             {
                 max = number;
