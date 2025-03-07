@@ -7,6 +7,7 @@ class Program
         // int magicNumber;
         // string userInput;
 
+
         // Console.Write("What is the magic number? ");
         // userInput = Console.ReadLine();
         // magicNumber = int.Parse(userInput);
