@@ -1,0 +1,12 @@
+Version Control is a change log that shows what changes were made, who made the 
+changes, and why the changes were made. Version Control is especially useful 
+when working as a team because it keeps track of changes that could otherwise 
+get lost with a number of people doing things. It also provides accountability 
+for programmers making the changes. A programming team might use Github to 
+manage version control as they work on a website. They could each work on a 
+different page of the website. Each page is related but somewhat independent as 
+well. This team can "pull" the changes of their colleagues to make "push" their 
+changes so their coworkers can see what they did. This allows multiple people 
+to be able to work at the same time without missing updates or interfering 
+negatively with each other. A version control command "git commit -m "message 
+explaining changes goes here" which commits the staged changes.
