@@ -6,3 +6,5 @@ This repository contains the starter code for many different projects. They are 
 However, in week 1, to practice the pushing to GitHub concept, I am editing the readme file, rather than the sandbox.
 
 practicing pushing changes...
+
+added changes to make sure pushing works
