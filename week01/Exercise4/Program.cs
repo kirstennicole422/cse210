@@ -1,43 +1,38 @@
 using System;
-using System.Data;
-using System.Net.Http.Headers;
+using System.Runtime.InteropServices;
 
 class Program
 {
     static void Main(string[] args)
     {
-        string userInput = "";
-        int nextNumber;
-        List<int> numbers = new List<int>();
-        float sum = 0;
-        int max = 0;
+        List<int> numberList = new List<int>();
+        int userNum;
+        int sum = 0;
+        int largestNum;
 
         Console.WriteLine("Enter a list of numbers, type 0 when finished.");
-
         do
         {
             Console.Write("Enter number: ");
-            userInput = Console.ReadLine();
-            if (userInput == "0")
+            string userString = Console.ReadLine();
+            userNum = int.Parse(userString);
+            if (userNum != 0)
             {
-                break;
+                numberList.Add(userNum);
             }
-            nextNumber = int.Parse(userInput);
-            numbers.Add(nextNumber);
-        } while (userInput != "0");
+        } while (userNum != 0);
 
-        foreach (int number in numbers)
+        largestNum = numberList[0];
+        foreach (int number in numberList)
         {
-            if (number > max)
+            sum += number;
+            if (number > largestNum)
             {
-                max = number;
+                largestNum = number;
             }
-            sum = sum + number;
         }
-
         Console.WriteLine($"The sum is: {sum}");
-        Console.WriteLine($"The average is: {sum/numbers.Count}");
-        Console.WriteLine($"The largest number is: {max}");
-
+        Console.WriteLine($"The average is: {numberList.Average()}");
+        Console.WriteLine($"The largest number is: {largestNum}");
     }
 }
