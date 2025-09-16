@@ -1,5 +1,4 @@
 using System;
-using System.Data;
 
 class Program
 {
@@ -7,38 +6,39 @@ class Program
     {
         Console.WriteLine("Welcome to the program!");
     }
-    
+
     static string PromptUserName()
     {
         Console.Write("Please enter your name: ");
         string userName = Console.ReadLine();
         return userName;
     }
+
     static int PromptUserNumber()
     {
         Console.Write("Please enter your favorite number: ");
-        string userNum = Console.ReadLine();
-        int userNumber = int.Parse(userNum);
-        return userNumber;
+        string userNumber = Console.ReadLine();
+        int userNum = int.Parse(userNumber);
+        return userNum;
     }
 
-    static int SquareNumber(int userNumber)
+    static int SquareNumber(int numberToSquare)
     {
-        return userNumber * userNumber;
+        return numberToSquare * numberToSquare;
     }
 
-    static void DisplayResult(string userName, int squareNumber)
+    static void DisplayResult(string userName, int squaredNumber)
     {
-        Console.WriteLine($"{userName}, the square of your number is {squareNumber}");
+        Console.WriteLine($"{userName}, the square of your number is {squaredNumber}");
     }
 
     static void Main(string[] args)
     {
-        string userName = PromptUserName();
-        int userNumber = PromptUserNumber();
-        int squareNumber = SquareNumber(userNumber);
-        
+        string userName;
+        int userNumber;
         DisplayWelcome();
-        DisplayResult(userName, squareNumber);
+        userName = PromptUserName();
+        userNumber = PromptUserNumber();
+        DisplayResult(userName, SquareNumber(userNumber));
     }
 }
